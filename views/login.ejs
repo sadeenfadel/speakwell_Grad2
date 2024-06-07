@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log-in page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/login.css" />
+  </head>
+  <body>
+    <!--LOGIN-->
+    <div class="container">
+      <div class="signup">
+        <form
+          action="/login"
+          id="login-form"
+          class="sign-in-form"
+          method="post"
+        >
+          <h2 class="title">LOG-IN</h2>
+          <div class="input">
+            <i class="fas fa-user"></i>
+            <input
+              type="text"
+              placeholder="Username"
+              id="login-username"
+              name="username"
+              required
+            />
+          </div>
+          <div class="input">
+            <i class="fas fa-lock"></i>
+            <input
+              type="password"
+              placeholder="Password"
+              id="login-password"
+              name="password"
+              required
+            />
+          </div>
+
+          <input type="submit" value="Login" class="btn" />
+          <p class="social-text">Or sign-in with social accounts!</p>
+          <div class="social-media">
+            <a href="#" class="social-icon">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-google"></i>
+            </a>
+          </div>
+        </form>
+
+        <!--SIGN-UP-->
+        <form
+          action="/signup"
+          id="signup-form"
+          class="sign-up-form"
+          method="post"
+        >
+          <h2 class="title">SIGN-UP</h2>
+          <div class="input">
+            <i class="fas fa-user"></i>
+            <input
+              type="text"
+              placeholder="Username"
+              id="signup-username"
+              name="username"
+              autocomplete="off"
+            />
+          </div>
+          <div class="input">
+            <i class="fas fa-envelope"></i>
+            <input
+              type="text"
+              placeholder="Email"
+              id="signup-email"
+              name="email"
+              autocomplete="off"
+            />
+          </div>
+          <div class="input">
+            <i class="fas fa-lock"></i>
+            <input
+              type="password"
+              placeholder="Password"
+              id="sign-password"
+              name="password"
+              autocomplete="off"
+            />
+          </div>
+          <div class="input">
+            <i class="fas fa-lock"></i>
+            <input
+              type="password"
+              placeholder="confirmPassword"
+              id="sign-cpassword"
+              name="cpassword"
+              autocomplete="off"
+            />
+          </div>
+          <div class="input" id="specialization-input">
+            <select id="signup-userType" name="userType">
+              <option value="Parent" id="1">Parent</option>
+              <option value="Therapist" id="2">Therapist</option>
+            </select>
+          </div>
+          <input type="submit" value="Sign up" class="btn" />
+          <p class="social-text">Or sign-in with social accounts!</p>
+          <div class="social-media">
+            <a href="#" class="social-icon">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-google"></i>
+            </a>
+          </div>
+        </form>
+      </div>
+
+      <div class="panel-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>Member of SPEEKWELL?</h3>
+            <p>Welcome Again!</p>
+            <button class="btn" id="log-in-btn">Log in</button>
+          </div>
+          <img src="/img/car.svg" alt="" class="image1" />
+        </div>
+
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>New to SPEEKWELL?</h3>
+            <p>Hurry up and join us :)</p>
+            <button class="btn" id="sign-up-btn">Sign up</button>
+          </div>
+          <img src="/img/log-in.svg" alt="" class="image1" />
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/login.js"></script>
+  </body>
+</html>

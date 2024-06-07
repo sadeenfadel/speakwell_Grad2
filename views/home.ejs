@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpeakWell</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/home.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Speak<span>Well</span></a>
+
+        <div class="header">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#About">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Therapists">Therapists</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Services">services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Contact">Contact_Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <% if (!loggedIn) { %>
+          <a href="/login">
+            <button class="btn btn-primary me-md-2" type="button">
+              Log In
+            </button>
+          </a>
+          <% } else { %>
+          <span>Welcome, <%= username %>!</span>
+          <a href="/logout">
+            <button class="btn btn-primary me-md-2" type="button">
+              Log Out
+            </button>
+          </a>
+          <% } %>
+        </div>
+      </div>
+    </nav>
+    <nav class="home">
+      <p class="h1">SPEAKWELL</p>
+      <p class="h2">Journey to Speech Together, We Reach.</p>
+      <a class="getstarted" href="/login">Get Started</a>
+    </nav>
+    <section id="about-section">
+      <div class="about-container">
+        <h1 id="About">Welcome to Our Website</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est
+          molestias similique, accusamus aut quaerat aliquid repellat maiores
+          necessitatibus sunt quia sed officiis, facilis totam. Quis harum
+          accusantium excepturi sapiente illum?
+        </p>
+      </div>
+    </section>
+    <div class="services">
+      <div class="title">
+        <h2 id="Therapists">Meet our Therapists</h2>
+      </div>
+      <div class="box">
+        <% therapists.forEach(function(therapist) { %>
+          <div class="card">
+            <i class="fa-solid fa-user"></i>
+            <h5><%= therapist.username %></h5>
+            <div class="a">
+              <p>
+                <%= therapist.bio %>
+              </p>
+              <p style="text-align: center"><a class="but" href="/profile?therapistId=<%= therapist._id %>"">select</a></p>
+            </div>
+          </div>
+        <% }); %>
+        
+        <!-- <div class="card">
+          <i class="fa-solid fa-user"></i>
+          <h5>Lucienne Darwish</h5>
+          <div class="a">
+            <p>
+              With a 10 YEARS of experience, Lucienne is a certified trainer,
+              Tele-therapist, and educational psychologist in Lebanon.
+            </p>
+            <p style="text-align: center"><a class="but" href="#">select</a></p>
+          </div>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-user"></i>
+          <h5>Safa Albustanji</h5>
+          <div class="a">
+            <p>
+              Safa is a Speech and Language Specialist also for the treatment,
+              evaluation, and rehabilitation of speech, language, sound, and
+              swallowing for all ages.
+            </p>
+            <p style="text-align: center"><a class="but" href="#">select</a></p>
+          </div>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-user"></i>
+          <h5>Dr. Aya Al Jazi</h5>
+          <div class="a">
+            <p>
+              Dr. Feng has over 15 years of experience as a Speech, Language,
+              Voice, and Swallowing Specialist.
+            </p>
+            <p style="text-align: center"><a class="but" href="#">select</a></p>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <div>
+      <div class="title" id="Services">
+        <h2>Our Servises</h2>
+      </div>
+      <div class="s">
+        <div class="flex">
+          <i class="fa-solid fa-paperclip"></i>
+          <h2>Booking system</h2>
+        </div>
+        <div class="flex">
+          <i class="fa-solid fa-calendar-week"></i>
+          <h2>conducting schedules</h2>
+        </div>
+        <div class="flex">
+          <i class="fa-solid fa-puzzle-piece"></i>
+          <h2>Interactive</h2>
+          <h2>games</h2>
+        </div>
+      </div>
+      <div class="s">
+        <div class="flex">
+          <i class="fa-solid fa-chart-line"></i>
+          <h2>Progress tracking system</h2>
+        </div>
+        <div class="flex">
+          <i class="fa-solid fa-comments"></i>
+          <h2>Feedback</h2>
+          <h2>system</h2>
+        </div>
+        <div class="flex">
+          <i class="fa-solid fa-people-arrows"></i>
+          <h2>Community Forum</h2>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p class="fp1">Speakwell</p>
+      <p class="fp2" id="Contact">Get in Touch</p>
+      <div class="social">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </footer>
+  </body>
+</html>

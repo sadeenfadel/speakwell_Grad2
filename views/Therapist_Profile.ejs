@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Therapist Profile Page</title>
+  <link rel="stylesheet" href="/css/therapistcss.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Therapist Profile Page</h1>
+    <form id="profile-form" action="/addtherapist" method="post">
+      <div class="form-group">
+        <label for="profile-photo">Profile Photo</label>
+        <input type="file" id="profile-photo" name="profilePhoto" accept="image/*">
+        <img id="profile-preview" src="/img/p.jpg" alt="Profile Photo Preview" style="display:none;">
+      </div>
+      <div class="form-group">
+        <label for="qualifications">Qualifications</label>
+        <textarea id="qualifications" name="qualifications" rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="certifications">Certifications</label>
+        <textarea id="certifications" name="certifications" rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="experience">Experience</label>
+        <textarea id="experience" name="experience" rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="specialization">Specialization</label>
+        <textarea id="specialization" name="specialization" rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="about">About</label>
+        <textarea id="about" name="about" rows="4" required></textarea>
+      </div>
+      <button type="submit">Save Profile</button>
+    </form>
+  </div>
+  <img class="imgchild" src="/img/p.jpg" alt="Photo" style="display:inline-block;">
+  <script src="/js/therapestjs.js"></script>
+</body>
+</html>

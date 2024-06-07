@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Therapists Profiles</title>
+    <link rel="stylesheet" href="/css/profile.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Therapists Profiles</h1>
+
+      <div
+        class="profile"
+        data-name="John Doe"
+        data-specialization="Pediatric Speech Therapy"
+      > 
+      <img
+          src="<%= isTherapist? therapist.profilePhoto: '' %>"
+          alt="<%= therapist.username %>"
+          class="profile-photo"
+        />
+        <div class="profile-info">
+          <h2>Dr. <%= therapist.username %></h2>
+          <p>
+            <strong>Qualifications:</strong> <%= therapist.qualifications %>
+          </p>
+          <p>
+            <strong>Certifications:</strong> <%= therapist.certifications %>
+          </p>
+          <p><strong>Experience:</strong> <%= therapist.experience %> years</p>
+          <p>
+            <strong>Specialization:</strong> <%= therapist.specialization %><%=
+            therapist.specialization %>
+          </p>
+          <p><strong>About:</strong> <%= therapist.about %></p>
+        </div>
+        <button class="book-btn" <%= isTherapist ? 'hidden' : '' %>  onclick="openBookingModal(<%= `'${therapist.username}'` %>)">
+          Book
+        </button>
+      </div>
+
+      <!-- <div
+        class="profile"
+        data-name="Jane Smith"
+        data-specialization="Articulation Disorders"
+      >
+        <img src="therapist1.jpg" alt="Dr. Jane Smith" class="profile-photo" />
+        <div class="profile-info">
+          <h2>Dr. Jane Smith</h2>
+          <p>
+            <strong>Qualifications:</strong> M.Sc. in Communication Disorders
+          </p>
+          <p>
+            <strong>Certifications:</strong> Licensed Speech-Language
+            Pathologist
+          </p>
+          <p><strong>Experience:</strong> 8 years</p>
+          <p><strong>Specialization:</strong> Articulation Disorders</p>
+          <p>
+            <strong>About:</strong> Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.
+          </p>
+        </div>
+        <button class="book-btn" onclick="openBookingModal('Jane Smith')">
+          Book
+        </button>
+      </div> -->
+    </div>
+
+    <form id="bookingModal" class="modal" action="sendBookingData" method="post">
+      <div class="modal-content">
+        <span class="close" onclick="closeBookingModal()">&times;</span>
+        <h2>Book an Appointment</h2>
+        <p>
+          Select a date and time for your appointment with
+          <span id="therapistName"></span>:
+        </p>
+        <label for="appointmentDate">Date:</label>
+        <input type="date" id="appointmentDate" name="date" required />
+        <input type="text" id="therapistId" name="therapistId" value="<%= therapist._id %>" hidden />
+        <label for="appointmentTime">Time:</label>
+        <input type="time" id="appointmentTime" name="time" required />
+        <button class="confirm-btn" type="submit">Request</button>
+      </div>
+    </form>
+
+    <script src="/js/profile.js"></script>
+  </body>
+</html>

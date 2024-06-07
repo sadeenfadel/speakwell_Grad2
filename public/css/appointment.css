@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+  }
+  
+  a {
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+  }
+  
+  .navbar-brand span {
+    color: #2B1392;
+  }
+  
+  .bg-light {
+    background-color: #FAC185 !important;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    margin-right: 2rem;
+  }
+  
+  .btn-primary {
+    color: #FFF;
+    background-color: #2B1392;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-color: #2B1392;
+  }
+  
+  .btn-primary:hover {
+    transform: scale(1.1);
+    background-color: #2B1392;
+  }
+  
+  .btn {
+    border-radius: 1rem;
+    font-size: 15px;
+    display: flex;
+  }
+  
+  .navbar-light .navbar-nav .nav-link {
+    color: #000000;
+    margin-left: 15px; /* Add margin between nav items */
+  }
+  
+  .navbar-light .navbar-nav .nav-link:hover {
+    color: #2B1392;
+  }
+  
+  .header {
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    font-size: 20px;
+    color: #050505;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 5px;
+  }
+  
+  .navbar {
+    color: #050505;
+  }
+  
+  .navbar-nav {
+    margin-left: 20px;
+    flex-direction: initial;
+    text-transform: capitalize;
+    color: #2B1392;
+  }
+  
+  .getstarted {
+    align-items: center;
+    color: #2B1392;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .home {
+    margin-top: 10px;
+    padding-top: 125px;
+    position: relative;
+    background-image: linear-gradient(rgba(219, 215, 215, 0.5), rgba(219, 215, 215, 0.5)), url(homepage.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 89vh;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    font-weight: bold;
+    justify-content: center;
+  }
+  
+  .h1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: Cursive;
+    font-size: 4.5rem;
+  }
+  
+  .h2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: Monospace;
+  }
+  
+  .getstarted {
+    background-color: #2B1392;
+    color: #fff;
+    padding: 8px 16px;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: .4s;
+    margin-top: 20px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .getstarted:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Removed the #about-section styles */
+  
+  /*Meet our Therapists*/
+  .services {
+    background: rgb(245, 240, 240);
+    width: 100%;
+    padding: 100px 0;
+  }
+  
+  .title h2 {
+    font-size: 2rem;
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+  }
+  
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    height: auto;
+    width: 100%;
+    max-width: 335px;
+    padding: 20px 35px;
+    background-color: #FAC185;
+    border: 1px solid #000000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .card i {
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    margin: 25px 0;
+    color: #2B1392;
+  }
+  
+  .card .but {
+    background-color: #2B1392;
+    color: #fff;
+    padding: 8px 16px;
+    display: inline-block;
+    font-size: 15px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: .4s;
+    margin-top: 5px;
+  }
+  
+  .card .but:hover {
+    background-color: transparent;
+    border: 2px solid #2B1392;
+    cursor: pointer;
+    color: #000000;
+  }
+  
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  footer {
+    width: 100%;
+    height: 400px;
+    background-color: #fdf6f6;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .fp2 {
+    font-size: 30px;
+    color: rgb(6, 6, 6);
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .fp1 {
+    color: #F94E0D;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    background-color: #FAC185;
+  }
+  
+  .social a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FAC185;
+    border-radius: 50%;
+    margin: 22px 15px;
+    color: #2B1392;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .social a:hover {
+    transform: scale(1.3);
+    transition: .3s;
+  }
+  
+  @media (max-width: 768px) {
+    .btn-primary, .getstarted, .card .but {
+      padding: 6px 12px;
+      font-size: 0.875rem;
+    }
+    .header {
+      font-size: 16px;
+      padding: 1rem;
+    }
+  
+    .home {
+      padding-top: 80px;
+      height: 70vh;
+    }
+  
+    .home .h1 {
+      font-size: 2.5rem;
+    }
+  
+    .home .h2 {
+      font-size: 1.5rem;
+    }
+  
+    .home .getstarted {
+      font-size: 1rem;
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    .title h2 {
+      font-size: 2rem;
+    }
+  
+    .card {
+      width: calc(100% - 40px);
+      margin: 20px;
+    }
+    .about-container, .box, .s {
+      padding: 10px;
+    }
+  
+    .about-container h1, .title h2, .flex h2 {
+      font-size: 1.5rem;
+    }
+  
+    .card, .flex {
+      margin: 10px 0;
+    }
+    .flex {
+      width: calc(100% - 40px);
+      margin: 10px;
+    }
+    footer {
+      height: auto;
+    }
+  }
+  .logout-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logout-box {
+    background-color: #FAC185;
+    padding: 40px 60px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+.goodbye-message {
+    font-family: Cursive, sans-serif;
+    font-size: 2.5rem;
+    color: #2B1392;
+    font-weight: bold;
+}
+  
+  /* Add or update styles for navbar links */
+.navbar-light .navbar-nav .nav-link {
+    color: #050505; /* Match the text color */
+    font-weight: bold; /* Match the text weight */
+    margin-left: 15px; /* Add margin between nav items */
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #2B1392; /* Match the hover color */
+}

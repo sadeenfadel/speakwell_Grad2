@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sessions Page</title>
+    <link rel="stylesheet" href="/css/session.css" />
+  </head>
+  <body>
+    <div class="App">
+      <h1>Let's Practice Speaking!</h1>
+      <p>
+        Here are some fun games to help your child improve their speech skills!
+      </p>
+
+      <% childData.forEach(child => { %>
+      <div class="card" onclick="window.location.href='/matching-game'">
+        <p style="color: #130650; font-family: didot; font-size: 18px">
+          Child: <%= child.name %> (Age: <%= child.age %>)
+        </p>
+        <img src="/img/KID.jpg" alt="Picture of <%= child.name %>" />
+        <p style="color: #130650; font-family: didot; font-size: 18px">
+          Game: <a href="/matching-game">Matching Game</a>
+        </p>
+        <p style="color: #130650; font-family: didot; font-size: 18px">
+          Helps with vocabulary building
+        </p>
+        <span class="tooltiptext">Helps with vocabulary building</span>
+      </div>
+      <% }); %>
+    </div>
+  </body>
+</html>

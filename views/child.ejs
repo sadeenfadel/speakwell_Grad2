@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Child Profile Page</title>
+    <link rel="stylesheet" href="/css/child.css" />
+    <script defer src="/js/child.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Child Profile Page</h1>
+      <form action="/addChild" method="post" id="child-profile-form">
+        <input type="hidden" name="parentId" value="<%= parentId %>" />
+        <div class="form-group">
+          <label for="child-name">Child's Name</label>
+          <input type="text" id="child-name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="child-age">Age</label>
+          <input
+            type="number"
+            id="child-age"
+            name="age"
+            required
+            min="3"
+            max="6"
+          />
+        </div>
+        <div class="form-group">
+          <label for="parent-name">Parent's Name</label>
+          <input
+            type="text"
+            id="parent-name"
+            name="parentName"
+            value="<%= parentName %>"
+            required
+            readonly
+          />
+        </div>
+        <div class="form-group">
+          <label for="child-photo">Profile Photo</label>
+          <input
+            type="file"
+            id="child-photo"
+            name="profilePhoto"
+            accept="image/*"
+          />
+          <img
+            id="child-profile-preview"
+            src="#"
+            alt="Profile Photo Preview"
+            style="display: none"
+          />
+        </div>
+        <div class="form-group">
+          <label for="child-bio">Bio</label>
+          <textarea id="child-bio" name="bio" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="child-interests">Interests</label>
+          <textarea
+            id="child-interests"
+            name="interests"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+        <button type="submit">Save Profile</button>
+      </form>
+    </div>
+    <img class="imgchild" src="/img/c.jpg" alt="Photo" style="display: none" />
+  </body>
+</html>
